@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WickPlayer</string>
+    <color name="lcs_integral_stock_word_up">#FF484A</color>
+    <color name="lcs_integral_stock_word_down">#32BB81</color>
+</resources>

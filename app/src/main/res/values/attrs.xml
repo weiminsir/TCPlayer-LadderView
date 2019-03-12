@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="ladderView">
+        <attr name="lad_direction" format="string" />
+        <attr name="lad_text" format="string|reference" />
+        <attr name="lad_text_size" format="dimension" />
+        <attr name="lad_text_color" format="color" />
+        <attr name="lad_background_color" format="color" />
+        <attr name="lad_angle" format="integer" />
+    </declare-styleable>
+
+</resources>

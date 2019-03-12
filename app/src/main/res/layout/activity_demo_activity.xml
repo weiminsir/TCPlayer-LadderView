@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_guess_percent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.wick.player.LadderProgressView
+        android:id="@+id/lv_up_word"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        app:lad_angle="30"
+        app:lad_background_color="@color/lcs_integral_stock_word_up"
+        app:lad_direction="left"
+        app:lad_text="看涨"
+        app:lad_text_color="#ffffff"
+        app:lad_text_size="20sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/lv_down_word"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.wick.player.LadderProgressView
+        android:id="@+id/lv_down_word"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="50dp"
+        app:lad_angle="30"
+        app:lad_background_color="@color/lcs_integral_stock_word_down"
+        app:lad_direction="right"
+        app:lad_text="看跌"
+        app:lad_text_color="#ffffff"
+        app:lad_text_size="20sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toRightOf="@+id/lv_up_word"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lv_up_word" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_percent"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_up_word">
+
+        <com.wick.player.LadderProgressView
+            android:id="@+id/lv_up_progress"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            app:lad_angle="30"
+            app:lad_background_color="@color/lcs_integral_stock_word_up"
+            app:lad_direction="left"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/lv_down_progress" />
+
+        <com.wick.player.LadderProgressView
+            android:id="@+id/lv_down_progress"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:lad_angle="30"
+            app:lad_background_color="@color/lcs_integral_stock_word_down"
+            app:lad_direction="right"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toRightOf="@+id/lv_up_progress"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lv_up_progress" />
+
+
+        <TextView
+            android:id="@+id/tv_up_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lv_up_progress"
+            app:layout_constraintLeft_toLeftOf="@id/lv_up_progress"
+            app:layout_constraintTop_toTopOf="@+id/lv_up_progress"
+            tools:text="50%" />
+
+
+        <TextView
+            android:id="@+id/tv_down_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lv_down_progress"
+            app:layout_constraintRight_toRightOf="@id/lv_down_progress"
+            app:layout_constraintTop_toTopOf="@+id/lv_down_progress"
+            tools:text="50%" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
