@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':threadlib'
 include ':lib_tcsuperplayer'
